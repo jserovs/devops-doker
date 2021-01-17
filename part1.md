@@ -76,3 +76,40 @@ update repository, get curl, call websiste
 ```
 docker container run -it --rm --name looper-it ubuntu:16.04 sh -c 'apt-get update; apt-get -y install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
+
+## 1.6
+create Jenkins file
+build docker
+
+```
+docker build .
+```
+
+executing does changes the tag on container
+```
+docker build . -t docker-clock
+```
+
+Dockerfile
+
+!!!CMD is not getting the linux command output date +%s, so clock could start
+
+```
+FROM devopsdockeruh/overwrite_cmd_exercise
+CMD ["bin/bash"]
+```
+
+this starts clock on screen
+```
+docker container run --rm -it docker-clock --clock $(date +%s)
+```
+output:
+```
+➜  devops-doker git:(1-6) ✗ docker container run --rm -it docker-clock --clock $(date +%s)
+1610868340
+1610868341
+1610868342
+```
+
+
+
