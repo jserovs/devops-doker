@@ -100,6 +100,7 @@ CMD ["bin/bash"]
 ```
 
 this starts clock on screen
+
 ```
 docker container run --rm -it docker-clock --clock $(date +%s)
 ```
@@ -109,6 +110,11 @@ output:
 1610868340
 1610868341
 1610868342
+```
+
+or Dockerfile can have following info, but not possible to use current epoch time
+```
+CMD ["--clock", "10000"]
 ```
 
 
