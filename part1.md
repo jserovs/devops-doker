@@ -111,6 +111,11 @@ output:
 1610868342
 ```
 
+or Dockerfile can have following info, but not possible to use current epoch time
+```
+CMD ["--clock", "10000"]
+```
+
 ## 1.7 
 
 ```
