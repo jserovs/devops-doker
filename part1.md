@@ -82,7 +82,7 @@ create Jenkins file
 build docker
 
 ```
-docker build .
+docker build . 
 ```
 
 executing does changes the tag on container
@@ -111,5 +111,12 @@ output:
 1610868342
 ```
 
+## 1.7 
 
+```
+docker build . -t curler
+```
 
+```
+docker container run --rm -it curler
+```
