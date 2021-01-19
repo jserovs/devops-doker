@@ -176,3 +176,19 @@ with logs
 ```
 docker container run -it -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt" -p 8000:8000 backend-example-docker
 ```
+
+## 1.12
+
+added to fronend Dockerfile :)
+
+```
+ENV LC_ALL=C.UTF-8
+ENV API_URL=http://localhost:8000
+```
+
+CORS is not working, so chaning backend
+
+```
+ENV LC_ALL=C.UTF-8
+FRONT_URL=http://localhost:5000/
+```
