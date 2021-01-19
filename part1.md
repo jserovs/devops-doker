@@ -125,3 +125,39 @@ docker build . -t curler
 ```
 docker container run --rm -it curler
 ```
+
+## 1.8
+
+make sure that `cat $(pwd)/user_app_logs/logs.txt` does does not state that this is directory
+
+```
+mkdir user_app_logs
+touch logs.txt
+docker container run -it --rm -v "$(pwd)/user_app_logs/logs.txt:/usr/app/logs.txt" devopsdockeruh/first_volume_exercise
+```
+
+```
+Tue, 19 Jan 2021 19:01:19 GMT
+Tue, 19 Jan 2021 19:01:22 GMT
+Tue, 19 Jan 2021 19:01:25 GMT
+Tue, 19 Jan 2021 19:01:28 GMT
+Secret message is:
+"Volume bind mount is easy"
+```
+
+## 1.9
+
+```
+docker container run -it --rm -p 80:80 devopsdockeruh/ports_exercise
+```
+
+```
+js@NS1952:~/dev/devops-doker$ curl localhost
+Ports configured correctly!!
+```
+
+## 1.10
+
+```
+docker container run -it --rm -p 80:5000 frontend-example-docker
+```
