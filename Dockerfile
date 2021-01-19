@@ -16,6 +16,7 @@ RUN npm install
 EXPOSE 8000
 
 ENV LC_ALL=C.UTF-8
+ENV FRONT_URL=http://localhost:5000
 
 ENTRYPOINT ["npm"]
 CMD ["start"]
