@@ -1,11 +1,19 @@
 FROM ubuntu:16.04
 
 RUN apt-get update; apt-get -y install curl
+RUN apt-get -y install git
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt install -y nodejs
 
-WORKDIR /curler
-RUN pwd
-RUN touch test_file.test_file
-COPY curl-my-website.sh .
-# RUN ./dev/curler/curl-my-website.sh
-# ENTRYPOINT [ "/dev/curler/curl-my-website.sh" ]
-CMD ["./curl-my-website.sh"]
+RUN node -v && npm -v
+
+
+WORKDIR /js
+RUN git clone https://github.com/docker-hy/frontend-example-docker
+WORKDIR /js/frontend-example-docker
+
+RUN npm install
+EXPOSE 5000
+
+ENTRYPOINT ["npm"]
+CMD ["start"]
