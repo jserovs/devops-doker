@@ -186,9 +186,9 @@ ENV LC_ALL=C.UTF-8
 ENV API_URL=http://localhost:8000
 ```
 
-CORS is not working, so chaning backend
+CORS is not working, so changing backend
 
 ```
 ENV LC_ALL=C.UTF-8
-FRONT_URL=http://localhost:5000/
+FRONT_URL=http://localhost:5000
 ```
