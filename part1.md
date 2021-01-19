@@ -159,5 +159,10 @@ Ports configured correctly!!
 ## 1.10
 
 ```
+docker build -t frontend-example-docker . 
+```
+
+```
 docker container run -it --rm -p 80:5000 frontend-example-docker
 ```
+
