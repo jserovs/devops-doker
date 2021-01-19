@@ -10,6 +10,12 @@ before doing something start docker for descktop, than it works in wsl
 resolution of 1.1 - 1.5 located in part1.md
 resolution of 1.8 - 1.9 located in part1.md
 
+for testing purposes utilizing --rm 
+
 1.6 = branch 1-6
 1.7 = branch 1-7
 1.10 = branch 1-10
+1.11 = branch 1-11
+
+
+
