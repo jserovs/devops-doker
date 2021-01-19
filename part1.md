@@ -174,5 +174,5 @@ docker build -t backend-example-docker .
 
 with logs
 ```
-docker container run -it -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt"-p 8000:8000 backend-example-docker
+docker container run -it -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt" -p 8000:8000 backend-example-docker
 ```

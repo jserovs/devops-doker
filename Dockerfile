@@ -9,11 +9,11 @@ RUN node -v && npm -v
 
 
 WORKDIR /js
-RUN git clone https://github.com/docker-hy/frontend-example-docker
-WORKDIR /js/frontend-example-docker
+RUN git clone https://github.com/docker-hy/backend-example-docker
+WORKDIR /js/backend-example-docker
 
 RUN npm install
-EXPOSE 5000
+EXPOSE 8000
 
 ENTRYPOINT ["npm"]
 CMD ["start"]
