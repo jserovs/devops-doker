@@ -15,5 +15,7 @@ WORKDIR /js/backend-example-docker
 RUN npm install
 EXPOSE 8000
 
+ENV LC_ALL=C.UTF-8
+
 ENTRYPOINT ["npm"]
 CMD ["start"]
