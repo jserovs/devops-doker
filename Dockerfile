@@ -15,5 +15,7 @@ WORKDIR /js/frontend-example-docker
 RUN npm install
 EXPOSE 5000
 
+ENV LC_ALL=C.UTF-8
+
 ENTRYPOINT ["npm"]
 CMD ["start"]
