@@ -227,3 +227,17 @@ docker build -t rails-example-project .
 ```
 docker container run -it --rm -p 3000:3000 rails-example-project
 ```
+
+## 1.15
+
+https://hub.docker.com/r/jserovs/deno-docker
+
+this basically inlcudes the deployment of app :) so you just need to mount the port
+
+```
+docker build -t jserovs/deno-docker .
+```
+
+```
+docker run -p 8083:8083 jserovs/deno-docker:latest
+```
