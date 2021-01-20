@@ -1,34 +1,15 @@
-FROM ruby:2.6.0
+FROM hayd/ubuntu-deno:latest
 
-
+RUN apt-get update
 RUN apt-get -y install git
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
-RUN apt install -y nodejs
-
-
 WORKDIR /js
-RUN git clone https://github.com/docker-hy/rails-example-project
-WORKDIR /js/rails-example-project
+RUN git clone https://github.com/jserovs/deno_csv
+WORKDIR /js/deno_csv
 
-RUN rm -frv /js/rails-example-project/config/credentials.yml.enc
+USER deno
 
-RUN bundle install
-ENV RAILS_LOG_TO_STDOUT=true
+EXPOSE 8083
 
-# dev version
-# RUN rails db:migrate
-# ENTRYPOINT ["rails","s"]
-
-RUN EDITOR="mate --wait" bin/rails credentials:edit
-RUN rails db:migrate RAILS_ENV=production
-
-RUN rake assets:precompile
-
-EXPOSE 3000
-
-
-
-ENTRYPOINT ["rails","s", "-e"]
-CMD ["production"]
+CMD ["run", "--allow-net", "upload_server.ts"]
 
