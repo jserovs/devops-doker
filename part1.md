@@ -166,6 +166,9 @@ docker build -t frontend-example-docker .
 docker container run -it -d --rm -p 80:5000 frontend-example-docker
 ```
 
+![](https://github.com/jserovs/devops-doker/blob/main/2021-01-19%2021_30_07-Window.png?raw=true)
+
+
 ## 1.11
 
 ```
@@ -176,6 +179,8 @@ with logs
 ```
 docker container run -it -d --rm -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt" -p 8000:8000 backend-example-docker
 ```
+
+
 
 ## 1.12
 
@@ -192,3 +197,5 @@ CORS is not working, so changing backend
 ENV LC_ALL=C.UTF-8
 FRONT_URL=http://localhost:5000
 ```
+
+![](https://github.com/jserovs/devops-doker/blob/main/2021-01-19%2022_30_07-Window.png?raw=true)
