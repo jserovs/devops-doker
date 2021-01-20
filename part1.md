@@ -202,3 +202,14 @@ FRONT_URL=http://localhost:5000
 
 
 ## 1.13 
+
+```
+docker build -t spring-example-project . 
+```
+
+
+```
+docker container run -it -d --rm -p 8080:8080 spring-example-project
+```
+
+![](https://github.com/jserovs/devops-doker/blob/main/2021-01-20%2008_11_42-Window.png?raw=true)
