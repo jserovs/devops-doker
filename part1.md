@@ -199,3 +199,6 @@ FRONT_URL=http://localhost:5000
 ```
 
 ![](https://github.com/jserovs/devops-doker/blob/main/2021-01-19%2022_30_07-Window.png?raw=true)
+
+
+## 1.13 
