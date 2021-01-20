@@ -163,7 +163,7 @@ docker build -t frontend-example-docker .
 ```
 
 ```
-docker container run -it -p 80:5000 frontend-example-docker
+docker container run -it -d --rm -p 80:5000 frontend-example-docker
 ```
 
 ## 1.11
@@ -174,7 +174,7 @@ docker build -t backend-example-docker .
 
 with logs
 ```
-docker container run -it -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt" -p 8000:8000 backend-example-docker
+docker container run -it -d --rm -v "$(pwd)/user_app_logs/logs.txt:/js/backend-example-docker/logs.txt" -p 8000:8000 backend-example-docker
 ```
 
 ## 1.12
