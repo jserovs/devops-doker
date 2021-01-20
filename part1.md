@@ -241,3 +241,28 @@ docker build -t jserovs/deno-docker .
 ```
 docker run -p 8083:8083 jserovs/deno-docker:latest
 ```
+
+## 1.16
+
+https://devops-with-docker-1-16.herokuapp.com/
+
+```
+docker tag devopsdockeruh/heroku-example registry.heroku.com/devops-with-docker-1-16/web
+```
+
+```
+docker push registry.heroku.com/devops-with-docker-1-16/web
+````
+
+```
+heroku container:push registry.heroku.com/devops-with-docker-1-16/web
+```
+
+```
+heroku container:release web -a devops-with-docker-1-16
+```
+
+
+```
+heroku logs -a devops-with-docker-1-16
+```
