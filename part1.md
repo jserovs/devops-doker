@@ -223,7 +223,6 @@ key should be removed and regenerated
 docker build -t rails-example-project . 
 ```
 
-
 ```
 docker container run -it --rm -p 3000:3000 rails-example-project
 ```
