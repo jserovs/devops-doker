@@ -252,7 +252,7 @@ docker tag devopsdockeruh/heroku-example registry.heroku.com/devops-with-docker-
 
 ```
 docker push registry.heroku.com/devops-with-docker-1-16/web
-````
+```
 
 ```
 heroku container:push registry.heroku.com/devops-with-docker-1-16/web
@@ -262,7 +262,24 @@ heroku container:push registry.heroku.com/devops-with-docker-1-16/web
 heroku container:release web -a devops-with-docker-1-16
 ```
 
-
 ```
 heroku logs -a devops-with-docker-1-16
 ```
+
+
+## 1.17
+
+```
+docker build -t jserovs/alpine-jdk8-maven .
+```
+
+```
+docker push jserovs/alpine-jdk8-maven
+```
+
+```
+docker container run -it --rm jserovs/alpine-jdk8-maven
+```
+
+https://hub.docker.com/r/jserovs/alpine-jdk8-maven
+
