@@ -213,3 +213,17 @@ docker container run -it -d --rm -p 8080:8080 spring-example-project
 ```
 
 ![](https://github.com/jserovs/devops-doker/blob/main/2021-01-20%2008_11_42-Window.png?raw=true)
+
+
+## 1.14
+
+key should be removed and regenerated
+
+```
+docker build -t rails-example-project . 
+```
+
+
+```
+docker container run -it --rm -p 3000:3000 rails-example-project
+```
